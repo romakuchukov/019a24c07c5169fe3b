@@ -5,20 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Welcome to the Pine Tree coffee and beer house online site">
         <title>Pine Tree Coffee and Beer House</title>
-        <link rel="stylesheet" href="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <div class="logo">
-            <a href="Homepage.html">Pine Tree Coffee and Beer House</a>
-        </div>
-
-        <ul class="nav">
-            <li><a href="Homepage.html">Home</a></li>
-            <li><a href="Products.html">About</a></li>
-            <li><a href="Merch.html">Merch</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
-        </ul>
+        <header class="header">
+            <div class="logo">
+                <a href="Homepage.html">Pine Tree Coffee and Beer House</a>
+            </div>
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Products.html">About</a></li>
+                <li><a href="Merch.html">Merch</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </header>
         <img src="Coffeehouseshop.jpg" alt="coffeehouseshop">
         <p>Santa Monica,CA</p>
         <h1>Contact Us</h1>
@@ -40,6 +44,7 @@
             <h1>Subscribe For Special Offers</h1>
             <label>Name</label>
             <input type="text" name="Yourname" value="">
+            <div class="clear"></div>
             <label>Email</label>
             <input type="email" name="Youremail" value="">
          </section>
