@@ -1,7 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@use 'normalize';
+@use 'breakpoints';
+
 body > * {
   text-transform: uppercase;
   font-family: 'Bebas Neue', cursive;
@@ -80,7 +79,7 @@ p {
     font-size: 28px;
   }
 }
-
+/*===HEADER===*/
 .header {
   background-color: #e1e1e1;
   width: 100%;
@@ -107,7 +106,7 @@ p {
   .logo a {
     display: block;
     float: left;
-    font-size: 18px;
+    font-size: 16px;
     padding: 20px 0px 20px 10px;
     letter-spacing: 2px;
   }
@@ -170,6 +169,7 @@ p {
 
   }
 }
+/*===END OF HEADER===*/
 input,
 textarea {
   border-radius: 0;
@@ -178,6 +178,7 @@ textarea {
   box-sizing: border-box;
   padding: 1px 5px;
 }
+/*===SECTION*===*/
 section {
   padding: 0 20px 56px 20px;
   &.contact {
@@ -227,7 +228,7 @@ form {
     margin: 0;
   }
 }
-
+/*===FOOTER===*/
 footer {
   padding: 20px;
   background: #91c547;
@@ -249,4 +250,4 @@ footer {
   }
 }
 
-@media screen and (max-width: 320px) {}
+//@media screen and (max-width: 320px) {}

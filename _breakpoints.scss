@@ -1,0 +1,34 @@
+$sm: 320px;     //small
+$md: 668px;     //medium
+$lg: 1024px;    //large
+$xl: 1920px;    //extra-large
+
+// Min width goes form "width" which is defined that way ------->
+// If you are resizing the right corner
+$sm-up: "(min-width: #{$sm})";
+$md-up: "(min-width: #{$md})";
+$lg-up: "(min-width: #{$lg})";
+$xl-up: "(min-width: #{$xl})";
+
+// Max width goes form "width" which is defined this way <-------
+// If you are resizing the right corner
+$sm-down: "(max-width: #{$sm - 1})";
+$md-down: "(max-width: #{$md - 1})";
+$lg-down: "(max-width: #{$lg - 1})";
+$xl-down: "(max-width: #{$xl - 1})";
+
+// Ranges ------->   <-------
+$sm-to-md: "#{$md-down} and #{$sm-up}";
+$sm-to-lg: "#{$lg-down} and #{$sm-up}";
+$sm-to-xl: "#{$xl-down} and #{$sm-up}";
+
+$md-to-lg: "#{$lg-down} and #{$md-up}";
+$md-to-xl: "#{$xl-down} and #{$md-up}";
+
+$lg-to-xl: "#{$xl-down} and #{$lg-up}";
+
+// use
+// in your main.scss
+// `import "breakpoints";`
+// then in your main.scss
+//`@media #{$xs-up} { ... }`
