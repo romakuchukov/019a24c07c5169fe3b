@@ -1,5 +1,5 @@
 @use 'normalize';
-@use 'breakpoints';
+@use 'breakpoints' as bp;
 
 body > * {
   text-transform: uppercase;
@@ -95,9 +95,13 @@ p {
     overflow: hidden;
     background-color: #e1e1e1;
   }
-  li a {
-    display: block;
-    padding: 20px 10px;
+  li {
+    @media #{bp.$md-up} { float: left; }
+    a {
+      display: block;
+      padding: 20px 10px;
+      @media #{bp.$md-up} { padding: 20px 30px; }
+    }
   }
   li a:hover,
   .menu-btn:hover {
@@ -114,6 +118,11 @@ p {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
+    @media #{bp.$md-up} {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
   }
   .menu-icon {
     cursor: pointer;
@@ -121,6 +130,7 @@ p {
     padding: 29px 16px;
     position: relative;
     user-select: none;
+    @media #{bp.$md-up} { display: none; }
     .nav-icon {
       background: #333;
       display: block;
@@ -249,5 +259,3 @@ footer {
     text-transform: none;
   }
 }
-
-//@media screen and (max-width: 320px) {}

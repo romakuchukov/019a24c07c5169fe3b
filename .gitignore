@@ -6,3 +6,7 @@ Products_mobile.jpg
 Desktopmockup/
 MobileScreenshots/
 tabletmockup/
+node_modules
+.npmrc
+main.1.css*
+package-lock.json

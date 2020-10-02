@@ -32,3 +32,15 @@ $lg-to-xl: "#{$xl-down} and #{$lg-up}";
 // `import "breakpoints";`
 // then in your main.scss
 //`@media #{$xs-up} { ... }`
+
+@mixin tablet {
+  @media #{$md-to-lg} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$lg-up} {
+    @content;
+  }
+}

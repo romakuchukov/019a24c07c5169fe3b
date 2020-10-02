@@ -1,0 +1,1 @@
+./node_modules/.bin/mqpacker main.css > temp.css && mv temp.css main.css
