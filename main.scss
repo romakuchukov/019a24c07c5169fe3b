@@ -60,11 +60,12 @@ p {
     letter-spacing: 1.5px;
   }
   &.img-bg {
-    background: url('aboutimage.png') no-repeat;
+    background: url('aboutimage.jpg') no-repeat;
     background-size: cover;
     margin: 0;
     padding: 16px 15px;
     font-size: 12px;
+    text-shadow: 1px 1px 0px #828282, 0px 0px 4px #fff;
   }
   &.title {
     font-family: 'Permanent Marker', cursive;
