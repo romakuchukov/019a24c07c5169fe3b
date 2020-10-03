@@ -301,8 +301,25 @@ section {
   }
   &.subscription {
     background: #e1e1e1;
+    @include bp.desktop {
+      padding: 0 20px 48px 20px;
+    }
     input {
       background: #e1e1e1;
+    }
+    h1 {
+      @include bp.desktop {
+        font-size: 40px;
+        padding: 42px 0 30px 0;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  > div {
+    @include bp.desktop {
+      width: 50%;
+      margin: 0 auto;
+      padding: 0px 60px 0 0px;
     }
   }
   h1 {
@@ -315,9 +332,17 @@ section {
     display: inline-block;
     text-align: right;
     margin-right: 2%;
+    @include bp.desktop {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
   }
   input {
     width: 84%;
+    @include bp.desktop {
+      padding: 8px 7px;
+      margin-bottom: 12px;
+    }
   }
 }
 
@@ -345,15 +370,27 @@ footer {
   padding: 20px;
   background: #91c547;
   text-align: center;
+  @include bp.desktop {
+    padding: 32px 20px;
+  }
   p, a, h2, h3 {
     font-size: 15px;
     margin: 0;
     color: black;
+    @include bp.desktop {
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
   }
   .small {
     font-size: 11px;
     line-height: 1em;
     margin: 10px 0;
+    @include bp.desktop {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
   }
   small {
     font-size: 9px;
