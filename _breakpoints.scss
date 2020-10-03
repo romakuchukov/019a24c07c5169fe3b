@@ -1,7 +1,7 @@
-$sm: 320px;     //small
-$md: 668px;     //medium
-$lg: 1024px;    //large
-$xl: 1920px;    //extra-large
+$sm: 320px;   //small
+$md: 668px;   //medium
+$lg: 1024px;  //large
+$xl: 1366px;  //extra-large
 
 // Min width goes form "width" which is defined that way ------->
 // If you are resizing the right corner
@@ -12,20 +12,15 @@ $xl-up: "(min-width: #{$xl})";
 
 // Max width goes form "width" which is defined this way <-------
 // If you are resizing the right corner
-$sm-down: "(max-width: #{$sm - 1})";
-$md-down: "(max-width: #{$md - 1})";
-$lg-down: "(max-width: #{$lg - 1})";
-$xl-down: "(max-width: #{$xl - 1})";
+$sm-dn: "(max-width: #{$sm - 1})";
+$md-dn: "(max-width: #{$md - 1})";
+$lg-dn: "(max-width: #{$lg - 1})";
+// $xl-dn: "(max-width: #{$xl - 1})";
 
 // Ranges ------->   <-------
-$sm-to-md: "#{$md-down} and #{$sm-up}";
-$sm-to-lg: "#{$lg-down} and #{$sm-up}";
-$sm-to-xl: "#{$xl-down} and #{$sm-up}";
+$sm-to-md: "#{$sm-up} and #{$md-dn}";
+$md-to-lg: "#{$md-up} and #{$lg-dn}";
 
-$md-to-lg: "#{$lg-down} and #{$md-up}";
-$md-to-xl: "#{$xl-down} and #{$md-up}";
-
-$lg-to-xl: "#{$xl-down} and #{$lg-up}";
 
 // use
 // in your main.scss
@@ -33,14 +28,18 @@ $lg-to-xl: "#{$xl-down} and #{$lg-up}";
 // then in your main.scss
 //`@media #{$xs-up} { ... }`
 
+@mixin mobile {
+  @media screen and #{$sm-to-md} { @content; }
+}
+
+@mixin tablet-up {
+  @media screen and #{$md-up} { @content; }
+}
+
 @mixin tablet {
-  @media #{$md-to-lg} {
-    @content;
-  }
+  @media screen and #{$md-to-lg} { @content; }
 }
 
 @mixin desktop {
-  @media #{$lg-up} {
-    @content;
-  }
+  @media screen and #{$lg-up} { @content; }
 }
