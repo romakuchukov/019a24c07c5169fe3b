@@ -67,10 +67,21 @@ img {
   &:first-of-type {
     padding: 0;
     margin-top: 0;
-    @include bp.mobile { padding-top: 60px; }
-    @include bp.tablet-up { height: 512px; }
+    @include bp.mobile {
+      padding-top: 60px;
+      max-height: 304px;
+    }
+    @include bp.tablet { height: 336px; }
+    @include bp.desktop { height: 512px; }
   }
   &.beers {
+    @include bp.tablet {
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 33.3%;
+      height: 202px;
+    }
     @include bp.desktop {
       margin: 0;
       padding: 0;
@@ -80,15 +91,23 @@ img {
     }
   }
   &.map {
+    @include bp.tablet {
+      float: left;
+      margin: 0;
+      display: block;
+      width: 54%;
+      padding: 0% 2% 2% 2%;
+      margin-top: 20px;
+    }
     @include bp.desktop {
       float: left;
       margin: 0;
       display: block;
       width: 54%;
-      padding: 3%;
+      padding: 2%;
     }
     &.contact {
-      @include bp.desktop{
+      @include bp.desktop {
         float: right;
         width: 50%;
         box-sizing: border-box;
@@ -123,6 +142,23 @@ p {
   line-height: 1.5em;
   margin-top: 20px;
   &.address {
+    font-size: 11px;
+    line-height: 1.8em;
+    @include bp.mobile {
+      font-size: 11px;
+      line-height: 1.8em;
+    }
+    @include bp.tablet {
+      margin: 0;
+      width: 46%;
+      float: left;
+      padding: 0 1% 1.5% 1%;
+      box-sizing: border-box;
+      font-size: 11px;
+      line-height: 2em;
+      letter-spacing: 1px;
+      margin-top: 20px;
+    }
     @include bp.desktop {
       margin: 0;
       width: 46%;
@@ -132,10 +168,6 @@ p {
       font-size: 19px;
       line-height: 2em;
       letter-spacing: 1px;
-    }
-    @include bp.mobile {
-      font-size: 11px;
-      line-height: 1.8em;
     }
     &.first {
       @include bp.desktop {
@@ -168,15 +200,23 @@ p {
   &.title {
     font-family: 'Permanent Marker', cursive;
     position: absolute;
-    top: 145px;
     margin: 0;
     padding: 0;
     text-align: center;
     left: 0;
     right: 0;
     color: #fff;
+    top: 145px;
     font-size: 28px;
-    @include bp.tablet-up {
+    @include bp.mobile {
+      top: 145px;
+      font-size: 28px;
+    }
+    @include bp.tablet {
+      top: 226px;
+      font-size: 28px;
+    }
+    @include bp.desktop {
       top: 290px;
       font-size: 74px;
       letter-spacing: 8px;
@@ -204,10 +244,17 @@ p {
     }
   }
   li {
-    @include bp.tablet-up { float: left; }
+    @include bp.tablet { float: left; }
+    @include bp.desktop { float: left; }
     a {
       display: block;
-      padding: 20px 10px;
+      @include bp.mobile {
+        padding: 20px 10px;
+      }
+      @include bp.tablet {
+        padding: 42px 10px;
+        font-size: 20px;
+      }
       @include bp.desktop {
         padding: 35px 16px;
         font-size: 30px;
@@ -220,12 +267,22 @@ p {
   }
   .logo a {
     display: block;
+    letter-spacing: 2px;
     float: left;
     font-size: 16px;
     padding: 20px 0px 20px 10px;
-    letter-spacing: 2px;
+    @include bp.mobile {
+      font-size: 16px;
+      padding: 20px 0px 20px 10px;
+    }
+    @include bp.tablet {
+      padding: 44px 0px 44px 20px;
+      letter-spacing: 2px;
+      line-height: 1em;
+      font-size: 20px;
+    }
     @include bp.desktop {
-      padding: 36px 0px 36px 40px;
+      padding: 36px 0px 36px 30px;
       letter-spacing: 2px;
       line-height: 1em;
       font-size: 34px;
