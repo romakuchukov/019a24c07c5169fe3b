@@ -64,7 +64,7 @@ img {
   padding: 0 20px;
   box-sizing: border-box;
   margin-top: 20px;
-  &:first-of-type {
+  &:first-of-type:not(.contact) {
     padding: 0;
     margin-top: 0;
     @include bp.mobile {
@@ -107,11 +107,18 @@ img {
       padding: 2%;
     }
     &.contact {
+      @include bp.tablet {
+        float: right;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 4%;
+        margin-top: 40px;
+      }
       @include bp.desktop {
         float: right;
         width: 50%;
         box-sizing: border-box;
-        padding: 4%;
+        padding: 0% 4%;
       }
     }
   }
@@ -193,6 +200,10 @@ p {
     text-align: center;
     font-size: 16px;
     letter-spacing: 1.5px;
+    @include bp.tablet {
+      margin-top: 0px;
+      font-size: 13px;
+    }
     @include bp.desktop {
       margin-top: 12px;
       font-size: 20px;
@@ -236,7 +247,7 @@ p {
     }
     @include bp.tablet {
       top: 226px;
-      font-size: 28px;
+      font-size: 33px;
     }
     @include bp.desktop {
       top: 290px;
@@ -314,7 +325,12 @@ p {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
-    @include bp.tablet-up {
+    @include bp.tablet {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    @include bp.desktop {
       clear: none;
       float: right;
       max-height: none;
@@ -326,7 +342,8 @@ p {
     padding: 29px 16px;
     position: relative;
     user-select: none;
-    @include bp.tablet-up { display: none; }
+    @include bp.tablet { display: none; }
+    @include bp.desktop { display: none; }
     .nav-icon {
       background: #333;
       display: block;
@@ -376,6 +393,23 @@ p {
   }
 }
 /*===END OF HEADER===*/
+@include bp.tablet {
+  div.contact-wrap {
+    display: flex;
+    align-items: flex-end;
+    img { order:2; }
+    form { order:1; }
+  }
+}
+@include bp.desktop {
+  div.contact-wrap {
+    display: flex;
+    align-items: flex-end;
+    img { order:2; }
+    form { order:1; }
+  }
+}
+
 input,
 textarea {
   border-radius: 0;
@@ -455,6 +489,20 @@ section {
 form {
   padding: 0 25px;
   margin-top: 20px;
+  @include bp.mobile {
+    padding: 0 25px;
+    margin-top: 20px;
+  }
+  @include bp.tablet {
+    margin-top: 0;
+    width: 50%;
+    float: left;
+    padding: 0 0% 0% 5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
   @include bp.desktop {
     margin-top: 0;
     width: 50%;
