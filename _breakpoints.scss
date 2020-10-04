@@ -32,10 +32,6 @@ $md-to-lg: "#{$md-up} and #{$lg-dn}";
   @media screen and #{$sm-to-md} { @content; }
 }
 
-@mixin tablet-up {
-  @media screen and #{$md-up} { @content; }
-}
-
 @mixin tablet {
   @media screen and #{$md-to-lg} { @content; }
 }
