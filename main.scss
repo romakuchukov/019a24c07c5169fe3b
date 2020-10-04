@@ -319,6 +319,7 @@ section {
     background: #e1e1e1;
     @include bp.desktop {
       padding: 0 20px 48px 20px;
+      clear: both;
     }
     input {
       background: #e1e1e1;
