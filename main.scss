@@ -119,6 +119,7 @@ img {
         box-sizing: border-box;
         padding: 0 4%;
         margin-top: 40px;
+        min-height: 210px;
       }
       @include bp.desktop {
         float: right;
@@ -132,7 +133,7 @@ img {
   &.merch {
     @include bp.tablet {
       width: 33.3%;
-      height: 200px;
+      height: 250px;
       float: left;
       padding: 2%;
       margin: 2% 0;
@@ -324,7 +325,7 @@ p {
       padding: 36px 0px 36px 30px;
       letter-spacing: 2px;
       line-height: 1em;
-      font-size: 34px;
+      font-size: 33px;
     }
   }
   .menu {
@@ -441,6 +442,9 @@ section {
   }
   &.subscription {
     background: #e1e1e1;
+    @include bp.tablet {
+      clear: both;
+    }
     @include bp.desktop {
       padding: 0 20px 48px 20px;
       clear: both;
@@ -460,15 +464,20 @@ section {
     }
   }
   > div {
+    @include bp.mobile {
+      max-width: 350px;
+      margin: 0 auto;
+    }
     @include bp.tablet {
       width: 300px;
       margin: 0 auto;
       padding: 0px 40px 0 0px;
     }
     @include bp.desktop {
-      width: 50%;
+      width: 570px;
       margin: 0 auto;
-      padding: 0px 60px 0 0px;
+      //min-width: 570px;
+      padding: 0px 90px 0 0px;
     }
   }
   h1 {
@@ -529,10 +538,11 @@ form {
       margin-right: 1%;
     }
     @include bp.desktop {
-      width: 14%;
+      width: 13.5%;
       text-align: right;
       font-size: 23px;
-      margin-right: 1%;
+      margin-right: 1.5%;
+      margin-top: 5px;
     }
   }
   input,
@@ -545,7 +555,8 @@ form {
     }
     @include bp.desktop {
       width: 80%;
-      padding: 7px;
+      padding: 8px;
+      margin-bottom: 14px;
     }
   }
   input[type=submit] {
